@@ -5,6 +5,15 @@ from keras.models import load_model
 import streamlit as st
 import requests
 
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+
+st.markdown(hide_st_style, unsafe_allow_html=True)
 #Taking a bigger data set improves the accuracy of the model 
 start = '2010-01-01'
 #end = '2019-12-31'
@@ -21,7 +30,7 @@ df = yf.download(user_input, start ,end)
 df.head()  
 
 #Decribing Data
-st.subheader('Data from 2021 -2023')
+st.subheader('Data from 2010 -2023')
 st.write(df.describe())
 
 #Visualization 
