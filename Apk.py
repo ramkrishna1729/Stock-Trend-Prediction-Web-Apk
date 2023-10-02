@@ -6,10 +6,10 @@ import streamlit as st
 import requests
 
 #Taking a bigger data set improves the accuracy of the model 
-#start = '2010-01-01'
+start = '2010-01-01'
 #end = '2019-12-31'
 
-start = '2021-01-04'
+#start = '2021-01-04'
 end = '2023-09-29'
 
 
