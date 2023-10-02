@@ -3,6 +3,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from keras.models import load_model
 import streamlit as st
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.models import load_model
 
 #Taking a bigger data set improves the accuracy of the model 
 #start = '2010-01-01'
