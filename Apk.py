@@ -5,15 +5,6 @@ from keras.models import load_model
 import streamlit as st
 import requests
 
-hide_streamlit_style = """
-            <style>
-            [data-testid="stToolbar"] {visibility: hidden !important;}
-            footer {visibility: hidden !important;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
-st.markdown(hide_st_style, unsafe_allow_html=True)
 #Taking a bigger data set improves the accuracy of the model 
 start = '2010-01-01'
 #end = '2019-12-31'
