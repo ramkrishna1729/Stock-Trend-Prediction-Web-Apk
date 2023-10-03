@@ -112,10 +112,11 @@ if selected_page == 'Home':
     from datetime import datetime
     start = '2010-01-01'
     # Get the current date and time
-    current_datetime = datetime.now()
+    #current_datetime = datetime.now()
 
     # Extract the current date
-    end = current_datetime.date()
+    #end = current_datetime.date()
+    end = '2024-01-01'
     user_input = st.text_input('Enter the Stock.Include ".NS" for Indian stock symbols.', 'AAPL')
     
     # Download the stock data using yfinance
