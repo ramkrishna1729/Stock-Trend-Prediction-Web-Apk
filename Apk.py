@@ -130,6 +130,15 @@ if selected_page == 'Home':
     
     df = yf.download(user_input, start, end)
 
+    
+     # Check if the dataframe is not empty
+    if not df.empty:
+        # Display the stock data
+        st.write('Stock Data:')
+        st.write(df)
+    else:
+        # Display an error message if the stock ticker is incorrect or data retrieval failed
+        st.write(f'Error: No data available for {user_input}. Please check the stock ticker.')
 
     df.head()
 
