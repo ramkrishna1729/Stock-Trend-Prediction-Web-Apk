@@ -108,14 +108,14 @@ elif selected_page == 'About App':
 if selected_page == 'Home':
     st.title('Trade Trend Tracker')
     
-    # Starting Date of historical observations
+    # Import the datetime module
+    from datetime import datetime
     start = '2010-01-01'
-
     # Get the current date and time
     current_datetime = datetime.now()
+
     # Extract the current date
     end = current_datetime.date()
-    # Get the user's input for the stock ticker
     user_input = st.text_input('Enter the Stock.Include ".NS" for Indian stock symbols.', 'AAPL')
     
     # Download the stock data using yfinance
