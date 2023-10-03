@@ -114,7 +114,7 @@ if selected_page == 'Home':
     st.title('Trade Trend Tracker')
     
     # Get the user's input for the stock ticker
-    user_input = st.text_input('Enter the Stock Ticker', 'AAPL')
+    user_input = st.text_input('Enter the Stock. Include ".NS" for Indian stock symbols.', 'AAPL')
     
     # Download the stock data using yfinance
     df = yf.download(user_input, start, end)
@@ -135,17 +135,15 @@ if selected_page == 'Home':
         st.write(f'Industry: {industry}')
         
         # Display the stock data
-        st.write('Stock Data:')
+        # Describing Data
+        st.subheader('Data ranging from 2010 - 2023')
         st.write(df)
     else:
         # Display an error message if the stock ticker is incorrect or data retrieval failed
-       st.write(f'Error: No data available for {user_input}. Please check the stock ticker.')
+        st.write(f"Error: No data available for {user_input}. Please check the stock ticker and make sure to include '.NS' for Indian stock symbols.")
 
 
-
-    # Describing Data
-    st.subheader('Data ranging from 2010 - 2023')
-    st.write(df.describe())
+   
 
     # Visualization
     st.subheader('Closing Price vs Time chart')
