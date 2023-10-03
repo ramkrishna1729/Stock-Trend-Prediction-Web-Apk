@@ -10,7 +10,7 @@ start = '2010-01-01'
 #end = '2019-12-31'
 
 #start = '2021-01-04'
-end = '2023-09-29'
+end = '2023-10-3'
 
 
 st.title('Stock Trend Prediction')
