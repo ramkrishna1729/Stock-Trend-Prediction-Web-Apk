@@ -109,38 +109,39 @@ elif selected_page == 'About App':
 
 
 
+# Check if the selected page is 'Home'
 if selected_page == 'Home':
     st.title('Trade Trend Tracker')
     
     # Get the user's input for the stock ticker
     user_input = st.text_input('Enter the Stock Ticker', 'AAPL')
     
-    # Get stock information using yfinance after obtaining user input
-    stock_info = yf.Ticker(user_input)
-    
-    # Retrieve name ,sector and industry information
-    sector = stock_info.info['sector']
-    industry = stock_info.info['industry']
-    full_name = stock_info.info['longName']
-    # Display the long name , sector and industry
-    
-    st.write(f'Stock Full Name: {full_name}')
-    st.write(f'Sector: {sector}')
-    st.write(f'Industry: {industry}')
-    
+    # Download the stock data using yfinance
     df = yf.download(user_input, start, end)
-
     
-     # Check if the dataframe is not empty
+    # Check if the dataframe is not empty
     if not df.empty:
+        # Get stock information using yfinance after obtaining user input
+        stock_info = yf.Ticker(user_input)
+        
+        # Retrieve name, sector, and industry information
+        sector = stock_info.info.get('sector', 'N/A')
+        industry = stock_info.info.get('industry', 'N/A')
+        full_name = stock_info.info.get('longName', 'N/A')
+        
+        # Display the long name, sector, and industry
+        st.write(f'Stock Full Name: {full_name}')
+        st.write(f'Sector: {sector}')
+        st.write(f'Industry: {industry}')
+        
         # Display the stock data
         st.write('Stock Data:')
         st.write(df)
     else:
         # Display an error message if the stock ticker is incorrect or data retrieval failed
-        st.write(f'Error: No data available for {user_input}. Please check the stock ticker.')
+       st.write(f'Error: No data available for {user_input}. Please check the stock ticker.')
 
-    df.head()
+
 
     # Describing Data
     st.subheader('Data ranging from 2010 - 2023')
