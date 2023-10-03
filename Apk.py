@@ -114,7 +114,7 @@ if selected_page == 'Home':
     st.title('Trade Trend Tracker')
     
     # Get the user's input for the stock ticker
-    user_input = st.text_input('Enter the Stock. Include ".NS" for Indian stock symbols.', 'AAPL')
+    user_input = st.text_input('Enter the Stock.Include ".NS" for Indian stock symbols.', 'AAPL')
     
     # Download the stock data using yfinance
     df = yf.download(user_input, start, end)
