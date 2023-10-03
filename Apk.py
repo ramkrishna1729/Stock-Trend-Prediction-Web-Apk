@@ -11,6 +11,11 @@ import requests
 from bs4 import BeautifulSoup
 import streamlit as st
 
+st.markdown("""
+<a href="https://github.com/yourusername/your-repo" style="position: absolute; top: 0; right: 0; z-index: 9999;">
+    <img src="https://yourimageurl.com/forkme.png" alt="Fork me on GitHub" style="position: absolute; top: 0; right: 0; border: 0;" />
+</a>
+""", unsafe_allow_html=True)
 
 # Starting Date of historical observations
 start = '2010-01-01'
