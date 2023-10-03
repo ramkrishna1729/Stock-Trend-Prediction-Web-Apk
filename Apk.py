@@ -4,13 +4,20 @@ import matplotlib.pyplot as plt
 from keras.models import load_model
 import streamlit as st
 import requests
+from datetime import datetime
 
-#Taking a bigger data set improves the accuracy of the model 
+#Starting Date of historical observations
 start = '2010-01-01'
-#end = '2019-12-31'
 
+# Get the current date and time
+current_datetime = datetime.now()
+# Extract the current date
+end = current_datetime.date()
+
+
+#end = '2019-12-31'
 #start = '2021-01-04'
-end = '2023-10-3'
+#end = '2023-09-29'
 
 
 st.title('Stock Trend Prediction')
