@@ -98,7 +98,7 @@ elif selected_page == 'About App':
 
     st.subheader('Meet the Creater:')
     st.write("Ram Krishna Pandey - Aspiring Data Scientist ")
-    st.write("[My email ID](ramkrishnapandey555@gmail.com/)")
+    st.write("[My email ID](mailto:ramkrishnapandey555@gmail.com)")
     st.write("[My Linkedin profile](https://www.linkedin.com/in/ram-krishna-pandey-8b8620197/)")
     st.write("[My Github profile](https://github.com/ramkrishna1729/)")
 
