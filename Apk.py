@@ -21,7 +21,7 @@ df = yf.download(user_input, start ,end)
 df.head()  
 
 #Decribing Data
-st.subheader('Data from 2010 -2023')
+st.subheader('Data ranging from 2010 -2023')
 st.write(df.describe())
 
 #Visualization 
