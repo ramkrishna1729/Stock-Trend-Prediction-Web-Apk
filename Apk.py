@@ -87,6 +87,7 @@ elif selected_page == 'About App':
     - Monitor the stock's stability, with an increasing margin indicating stability and a decreasing margin indicating instability.
     - Stay informed with the latest news and market sentiment in the News and Events section.
     - Explore the app's features in the About App section for valuable insights.
+    - Open in pc , laptop for better user experience .        
              """)
 
       # Functionality section
