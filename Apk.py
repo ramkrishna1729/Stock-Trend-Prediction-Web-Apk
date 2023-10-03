@@ -137,8 +137,8 @@ if selected_page == 'Home':
         
         # Display the stock data
         # Describing Data
-        st.subheader('Data ranging from 2010 - 2023')
-        st.write(df)
+        st.subheader('Lastest trends')
+        st.write(df.tail())
     else:
         # Display an error message if the stock ticker is incorrect or data retrieval failed
         st.write(f"Error: No data available for {user_input}. Please check the stock ticker and make sure to include '.NS' for Indian stock symbols.")
