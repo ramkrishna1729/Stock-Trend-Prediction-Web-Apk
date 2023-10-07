@@ -78,6 +78,7 @@ tensorboard==2.14.1; python_version >= '3.9'
 tensorboard-data-server==0.7.1; python_version >= '3.7'
 tensorflow==2.14.0; python_version >= '3.9'
 tensorflow-estimator==2.14.0; python_version >= '3.7'
+tensorflow-intel==2.14.0; platform_system == 'Windows'
 tensorflow-io-gcs-filesystem==0.31.0; python_version < '3.12' and python_version >= '3.7'
 termcolor==2.3.0; python_version >= '3.7'
 threadpoolctl==3.2.0; python_version >= '3.8'
@@ -96,4 +97,5 @@ wheel==0.41.2; python_version >= '3.7'
 wrapt==1.14.1; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
 yfinance==0.2.30
 zipp==3.17.0; python_version >= '3.8'
-
+subprocess.run ==0.0.8
+tracemalloc==3.4
